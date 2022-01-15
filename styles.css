@@ -1,0 +1,11 @@
+body {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.hex
+{
+    color: rgb(212, 204, 207); 
+    font-size: 135px;
+}
