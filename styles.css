@@ -4,8 +4,48 @@ body {
     padding: 0;
 }
 
-.hex
-{
-    color: rgb(212, 204, 207); 
-    font-size: 135px;
-}
+.wrapper {
+    width: 100px; /* This is the only value you need to change */
+    transform: rotate(-30deg);
+    padding-top: 10px;
+  }
+  
+  .container {
+    position: relative; 
+    width: 100%;
+    padding-bottom: 86.6%; /* This sets the height of the div to 86% of its width */
+  }
+  
+  .hexagon {
+    position: absolute; /* so .hexagon isn't pushed out of .container by the padding */
+    left: 25%;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto; /* center .hexagon inside .container*/
+    background-color: rgb(195, 201, 204); /* color of the hexagon */
+  }
+  
+  .hexagon:before,
+  .hexagon:after {
+    display: block;
+    position:absolute; /* otherwise :after is below the hexagon */
+    top:0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+  }
+  
+  .hexagon:before {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    transform: rotate(60deg);
+  }
+  
+  .hexagon:after {
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    transform: rotate(120deg);
+  }
